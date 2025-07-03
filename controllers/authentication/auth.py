@@ -31,14 +31,12 @@ def login():
         conn.close()
 
         if user:
-            device_uuid = user["Device_uuid"]
-            device_active = user["IsDeviceActive"]
-            print(device_active)
             return jsonify({
                 "message": "Login successful",
-                "device_uuid": device_uuid,
-                "device_active": device_active
+                "Username": user["Username"],
+                "Usertype": usertype
             }), 200
+
         else:
             return jsonify({"error": "Incorrect username or password or user not exist"}), 404
 

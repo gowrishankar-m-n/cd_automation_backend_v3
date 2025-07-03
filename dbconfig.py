@@ -8,7 +8,7 @@ def get_db_connection():
             database="cd_automation",  
             user="root", 
             port="3306",
-            password="Admin123"  
+            password="shankar"  
         )
         if connection.is_connected():
             print("✅ Connection successful!")
